@@ -1,0 +1,96 @@
+.Hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 150px;
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+  }
+}
+
+
+.WorksDetails {
+  min-height: 70vh;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 40px;
+
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .card {
+      display: flex;
+      justify-content: space-between;
+      width: 800px;
+      border: solid 1px rgb(61, 61, 61);
+      padding: 20px;
+      border-radius: 10px;
+
+      h2{
+        width: 600px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      button {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .WorksDetails {
+    min-height: 70vh;
+    h1 {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 30px;
+      
+  
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .card {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border: solid 1px rgb(61, 61, 61);
+        padding: 20px;
+        border-radius: 10px;
+  
+        h2{
+          width: 200px;
+        }
+  
+       
+  
+      }
+    }
+  }
+  
+}

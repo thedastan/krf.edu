@@ -1,0 +1,181 @@
+.Hero {
+	width: 100%;
+	height: 800px;
+	position: relative;
+	background-image: url("../../../../assets/images/hero-fon.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			rgba(8, 185, 177, 0.582),
+			rgba(9, 163, 155, 0.562)
+		);
+		z-index: 1;
+	}
+
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		position: relative;
+		z-index: 2;
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 60px;
+			color: black;
+			width: 100%;
+			text-align: center;
+
+			h1 {
+        width: 100%;
+				font-size: 44px;
+				color: rgb(255, 255, 255);
+
+			}
+			p {
+				font-size: 24px;
+				width: 520px;
+
+				color: #f0f0f0;
+			}
+
+			.btn {
+				color: white;
+				display: flex;
+				align-items: center;
+				position: relative;
+
+        transition: transform 0.5s ease; // Плавный переход
+
+      &:hover {
+        transform: scale(1.1); // Увеличение размера
+      }
+
+				.box {
+					width: 80px;
+					height: 80px;
+					border-radius: 50%;
+					border: solid 1px white;
+				}
+
+				h2 {
+					margin-left: -30px;
+				}
+
+				h3 {
+					display: flex;
+					margin-left: 20px;
+					font-size: 30px;
+					color: rgb(245, 99, 46);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+  .Hero {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-image: url("../../../../assets/images/hero-fon.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(8, 185, 177, 0.582),
+        rgba(9, 163, 155, 0.562)
+      );
+      z-index: 1;
+    }
+  
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      position: relative;
+      z-index: 2;
+  
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        color: black;
+        width: 100%;
+        text-align: center;
+  
+        h1 {
+          font-size: 34px;
+          color: white;
+        }
+        p {
+          font-size: 18px;
+          width:100%;
+  
+          color: #f0f0f0;
+        }
+  
+        .btn {
+          color: white;
+          display: flex;
+          align-items: center;
+          position: relative;
+  
+          transition: transform 0.5s ease; // Плавный переход
+  
+        &:hover {
+          transform: scale(1.1); // Увеличение размера
+        }
+  
+          .box {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: solid 1px white;
+          }
+  
+          h2 {
+            margin-left: -30px;
+            font-size: 18px;
+          }
+  
+          h3 {
+            display: flex;
+            margin-left: 20px;
+            font-size: 30px;
+            color: rgb(245, 99, 46);
+          }
+        }
+      }
+    }
+  }
+  
+}
