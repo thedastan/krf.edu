@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://krf-edu.vercel.app/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>1.0</priority>
+  </url>
+   
+   <url>
+    <loc>https://krf-edu.vercel.app/administration</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://krf-edu.vercel.app/teachers</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+   <url>
+    <loc>https://krf-edu.vercel.app/accreditation</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://krf-edu.vercel.app/departments</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://krf-edu.vercel.app/specialties</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url> 
+  <url>
+    <loc>https://krf-edu.vercel.app/works</loc>
+    <lastmod>2024-12-18</lastmod>
+    <priority>0.8</priority>
+  </url> 
+  
+
+  
+</urlset>
+ 
