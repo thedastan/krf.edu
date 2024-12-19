@@ -68,12 +68,25 @@
 				border: none;
 				color: white;
 				font-size: 26px;
+				width: 60px;
 				.languageOption {
 					color: rgb(0, 0, 0);
+					background: rgb(255, 255, 255);
+					padding: 10px;
+					font-size: 20px;
+
+				 
+            &:hover {
+							background-color: #00132c;
+							border-radius: 20px;
+							color: white;
+						}
+          
 				}
 			}
 
       }
+ 
  
 			.customSelect {
 				position: relative;

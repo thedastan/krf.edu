@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+Allow: /specialties
+Allow: /works
+Allow: /departments
+Allow: /administration
+Allow: /teachers
+
+
 
 Sitemap: https://krf-edu.vercel.app/sitemap.xml
 
