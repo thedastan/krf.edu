@@ -1,10 +1,10 @@
-export const PHONE_NUMBER = '+996 772 621 772'
-export const PHONE_NUMBER_WHATSAPP = '+996772621772'
+export const PHONE_NUMBER = '+996 778 684 972'
+export const PHONE_NUMBER_WHATSAPP = '+996778684972'
 
 
 export const WHATSAPP_NUMBER = PHONE_NUMBER
 
-export const EMAIL_ADDRESS = 'osh.ogpi@gmail.com'
+export const EMAIL_ADDRESS = 'kyrgyzrossiya@mail.ru'
 
 export const LOCATION = ' Кыргыз Республикасы 723500, Ош обласу, Ош шаарыИсанова 73 а'
 
