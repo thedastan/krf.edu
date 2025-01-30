@@ -52,7 +52,7 @@ const About = () => {
 
 							<div className={scss.text}>
 								<h1>{t("About.boy")}</h1>
-								<h1>605</h1>
+								<h1>1000</h1>
 							</div>
 						</div>
 
@@ -74,7 +74,7 @@ const About = () => {
 							<div className={scss.text}>
 								<h1>{t("About.tich")}</h1>
 
-								<h1>38</h1>
+								<h1>43</h1>
 							</div>
 						</div>
 
