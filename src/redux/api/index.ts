@@ -18,7 +18,7 @@ export const api = createApi({
   baseQuery: baseQueryExtended,
   refetchOnFocus: true,
   refetchOnReconnect: true,
-  tagTypes: ["news","gallery","curriculum","science","department","accreditation","administration","teacher"],
+  tagTypes: ["news","gallery","curriculum","science","department","accreditation","administration","teacher","quantitystudents","quantityteachers"],
   endpoints: () => ({}),
 });
 

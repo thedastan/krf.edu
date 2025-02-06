@@ -1,54 +1,29 @@
 "use client";
-import { useGetAdminQuery, useGetIlimQuery } from "@/redux/api/catalog";
+import { useGetAdminQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const Hero = () => {
 	const { data } = useGetAdminQuery();
 
-	const handleFileClick = (fileUrl: any) => {
-		if (fileUrl) {
-			window.open(fileUrl, "_blank");
-		}
-	};
+	const { t } = useLanguageStore();
 
+	const router = useRouter();
 	return (
-		 <div className={scss.Hero}>
+		<div className={scss.Hero}>
 			<div className="container">
-			<div className={scss.cards}>
-			{data?.map((el, index) => (
-				<div key={index} className={scss.card}>
-					<div className={scss.image}>
-						<Image
-							className={scss.img}
-							src={el.image}
-							alt={el.fullname}
-							width={500}
-							height={350}
-							objectFit="cover"
-						/>
-					</div>
-
-					<h1>{el.fullname}</h1>
-					<h3>{el.lesson}</h3>
-					<h3>{el.position}</h3>
-
-					<button
-						style={{
-							border: "none",
-							fontSize: "22px",
-							background: "white",
-							cursor: "pointer",
-						}}
-						onClick={() => handleFileClick(el.file)}>
-					   Резюме
-					</button>
+				<h1 style={{ textAlign: "center" }}>{t("Works.title")}</h1>
+				<div className={scss.content}>
+					{data?.map((el, index) => (
+						<h1 onClick={() => router.push(`administration/${el.id}`)} key={index}>
+							{el.fullname}
+						</h1>
+					))}
+					
 				</div>
-			))}
-			
-		</div>
 			</div>
-		 </div>
+		</div>
 	);
 };
 

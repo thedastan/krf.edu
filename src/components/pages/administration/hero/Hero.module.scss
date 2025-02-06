@@ -1,71 +1,95 @@
 .Hero {
-	min-height: 70vh;
-	.cards {
-		display: flex;
-		flex-wrap: wrap;
-    margin-top: 200px;
-    gap: 20px;
-		.card {
-			width: 235px;
-			height: 100%;
-			text-align: center;
-      padding-bottom: 40px;
-			.image {
-				width: 100%;
-				height: 350px;
-				overflow: hidden;
-				border-radius: 6px;
-				.img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
+  display: flex;
+	flex-direction: column;
+	margin-top: 150px;
+	min-height: 100vh;
 
-			h1 {
-				font-size: 22px;
-				font-weight: 700;
-				margin-top: 8px;
-			}
 
-			h3 {
-				font-size: 18px;
-				font-weight: 400;
-			}
-		}
-	}
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 150px;
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+  }
+}
+
+
+.WorksDetails {
+  min-height: 70vh;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 40px;
+
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .card {
+      display: flex;
+      justify-content: space-between;
+      width: 800px;
+      border: solid 1px rgb(61, 61, 61);
+      padding: 20px;
+      border-radius: 10px;
+
+      h2{
+        width: 600px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      button {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+    }
+  }
 }
 
 @media (max-width: 768px) {
-	.Hero {
-		.cards {
-			.card {
-				width: 100%;
-				height: 100%;
-				text-align: center;
-				.image {
-					width: 100%;
-					height: 350px;
-					overflow: hidden;
-					border-radius: 6px;
-					.img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
-				}
-
-				h1 {
-					font-size: 22px;
-					font-weight: 700;
-					margin-top: 8px;
-				}
-
-				h3 {
-					font-size: 18px;
-					font-weight: 400;
-				}
-			}
-		}
-	}
+  .WorksDetails {
+    min-height: 70vh;
+    h1 {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 30px;
+      
+  
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .card {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border: solid 1px rgb(61, 61, 61);
+        padding: 20px;
+        border-radius: 10px;
+  
+        h2{
+          width: 200px;
+        }
+  
+       
+  
+      }
+    }
+  }
+  
 }

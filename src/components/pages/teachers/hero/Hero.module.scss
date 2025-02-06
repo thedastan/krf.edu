@@ -1,5 +1,8 @@
 .Hero {
-	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	margin-top: 150px;
+	min-height: 100vh;
 	.cards {
 		display: flex;
 		flex-wrap: wrap;

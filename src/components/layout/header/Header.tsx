@@ -31,12 +31,12 @@ const Header = () => {
 			<div className="container">
 				<div className={scss.content}>
 					<div className={scss.image}>
-					<Link href={"/"}> 
-						<Image
-							style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-							src={logo}
-							alt="img"
-						/>
+						<Link href={"/"}>
+							<Image
+								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+								src={logo}
+								alt="img"
+							/>
 						</Link>
 					</div>
 
@@ -53,12 +53,16 @@ const Header = () => {
 					<nav className={`${scss.nav} ${isOpen ? scss.show : ""}`}>
 						<div className={scss.image2}>
 							<div className={scss.img}>
-								 <Link href={"/"}>
-								 <Image
-									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-									src={logo}
-									alt="img"
-								/>
+								<Link href={"/"}>
+									<Image
+										style={{
+											width: "100%",
+											height: "100%",
+											borderRadius: "50%",
+										}}
+										src={logo}
+										alt="img"
+									/>
 								</Link>
 							</div>
 						</div>
@@ -72,7 +76,11 @@ const Header = () => {
 							<ul className={scss.options}>
 								<div className={scss.option}>
 									{selectOptions.map((option, index) => (
-										<Link onClick={closeMenu} href={option.link} className={scss.link} key={index}>
+										<Link
+											onClick={closeMenu}
+											href={option.link}
+											className={scss.link}
+											key={index}>
 											{option.title}
 										</Link>
 									))}
@@ -80,7 +88,11 @@ const Header = () => {
 							</ul>
 						</div>
 						{links.map((el, index) => (
-							<Link onClick={closeMenu} key={index} className={scss.link} href={el.link}>
+							<Link
+								onClick={closeMenu}
+								key={index}
+								className={scss.link}
+								href={el.link}>
 								{el.title}
 							</Link>
 						))}

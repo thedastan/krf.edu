@@ -22,77 +22,69 @@ namespace GALLERY {
 	type GetGalleryReq = void;
 }
 
-
 namespace SPES {
 	type GetSpesRes = [
 		{
-			id: number
+			id: number;
 			curriculums: Array<{
-				id: number
-				name_file: string
-				file: any
-			}>
-			title: string
-			name: string
+				id: number;
+				name_file: string;
+				file: any;
+			}>;
+			title: string;
+			name: string;
 		}
 	];
 
 	type GetSpesReq = void;
 }
 
-
-
 namespace Ilim {
 	type GetIlimRes = [
 		{
-			id: number
+			id: number;
 			sciences: Array<{
-				id: number
-				name_file: string
-				file: string
-			}>
-			title: string
-			name: string
+				id: number;
+				name_file: string;
+				file: string;
+			}>;
+			title: string;
+			name: string;
 		}
-		
 	];
 
 	type GetIlimReq = void;
 }
 
-
 namespace DEPAR {
 	type GetDepartamentRes = [
 		{
-			id: number
+			id: number;
 			departments: Array<{
-				id: number
-				name_file: string
-				file: string
-			}>
-			which_dep: string
-			name: string
+				id: number;
+				name_file: string;
+				file: string;
+			}>;
+			which_dep: string;
+			name: string;
 		}
-		
 	];
 
 	type GetDepartamentReq = void;
 }
 
-
 namespace ACC {
 	type GetAccRes = [
 		{
-			id: number
+			id: number;
 			accreds: Array<{
-				id: number
-				name_file: string
-				file: string
-			}>
-			title: string
-			name: string
+				id: number;
+				name_file: string;
+				file: string;
+			}>;
+			title: string;
+			name: string;
 		}
-		
 	];
 
 	type GetAccReq = void;
@@ -102,19 +94,17 @@ namespace ADMIN {
 	type GetAdminRes = [
 		{
 			id: number;
-			image: string;
+			filefield_administration: Array<{
+				name_file:string
+				file: string;
+			}>;
 			fullname: string;
 			lesson: string;
-			position: string;
-			file: string;
-
 		}
 	];
 
 	type GetAdminReq = void;
 }
-
-
 
 namespace TICH {
 	type GetTichRes = [
@@ -125,9 +115,28 @@ namespace TICH {
 			lesson: string;
 			experience: string;
 			file: string;
-
 		}
 	];
 
 	type GetTichReq = void;
+}
+
+namespace STUDENT {
+	type GetStudentesRes = [
+		{
+			quantity_students: number;
+		}
+	];
+
+	type GetStudentesReq = void;
+}
+
+namespace TICHCOUNT {
+	type GetTichCountRes = [
+		{
+			quantity_teachers: number;
+		}
+	];
+
+	type GetTichCountReq = void;
 }

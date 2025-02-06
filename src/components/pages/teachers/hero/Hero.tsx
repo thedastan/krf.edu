@@ -2,9 +2,12 @@
 import { useGetAdminQuery, useGetIlimQuery, useGetTicherQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
 import Image from "next/image";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const Hero = () => {
 	const { data } = useGetTicherQuery();
+
+	const { t } = useLanguageStore();
 
 	const handleFileClick = (fileUrl: any) => {
 		if (fileUrl) {
@@ -15,6 +18,7 @@ const Hero = () => {
 	return (
 		 <div className={scss.Hero}>
 			<div className="container">
+			<h1 style={{textAlign:"center"}}>{t("Teacher.title")}</h1>
 			<div className={scss.cards}>
 			{data?.map((el, index) => (
 				<div key={index} className={scss.card}>

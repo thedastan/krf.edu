@@ -31,7 +31,10 @@ const api = index.injectEndpoints({
 			}),
 			providesTags: ["science"],
 		}),
-		getDepartament: build.query<DEPAR.GetDepartamentRes, DEPAR.GetDepartamentReq>({
+		getDepartament: build.query<
+			DEPAR.GetDepartamentRes,
+			DEPAR.GetDepartamentReq
+		>({
 			query: () => ({
 				url: `department`,
 				method: "GET",
@@ -53,12 +56,32 @@ const api = index.injectEndpoints({
 			}),
 			providesTags: ["administration"],
 		}),
-		getTicher: build.query<TICH.GetTichRes,TICH.GetTichReq>({
+
+		getTicher: build.query<TICH.GetTichRes, TICH.GetTichReq>({
 			query: () => ({
 				url: `teacher`,
 				method: "GET",
 			}),
 			providesTags: ["teacher"],
+		}),
+
+		getStudent: build.query<STUDENT.GetStudentesRes, STUDENT.GetStudentesReq>({
+			query: () => ({
+				url: `quantity_students`,
+				method: "GET",
+			}),
+			providesTags: ["quantitystudents"],
+		}),
+
+		getTichCount: build.query<
+			TICHCOUNT.GetTichCountRes,
+			TICHCOUNT.GetTichCountReq
+		>({
+			query: () => ({
+				url: `quantity_teachers`,
+				method: "GET",
+			}),
+			providesTags: ["quantityteachers"],
 		}),
 	}),
 });
@@ -71,5 +94,7 @@ export const {
 	useGetDepartamentQuery,
 	useGetAccQuery,
 	useGetAdminQuery,
-	useGetTicherQuery
+	useGetTicherQuery,
+	useGetStudentQuery,
+	useGetTichCountQuery,
 } = api;
