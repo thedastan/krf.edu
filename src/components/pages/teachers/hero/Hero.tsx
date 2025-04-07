@@ -1,13 +1,16 @@
 "use client";
-import { useGetAdminQuery, useGetIlimQuery, useGetTicherQuery } from "@/redux/api/catalog";
+import {  useGetTicherQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
 import Image from "next/image";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
 	const { data } = useGetTicherQuery();
 
-	const { t } = useLanguageStore();
+		const t = useTranslations("Teacher");
+
+		console.log(data,"ticher");
+		
 
 	const handleFileClick = (fileUrl: any) => {
 		if (fileUrl) {
@@ -18,7 +21,7 @@ const Hero = () => {
 	return (
 		 <div className={scss.Hero}>
 			<div className="container">
-			<h1 style={{textAlign:"center"}}>{t("Teacher.title")}</h1>
+			<h1 style={{textAlign:"center"}}>{t("title")}</h1>
 			<div className={scss.cards}>
 			{data?.map((el, index) => (
 				<div key={index} className={scss.card}>
@@ -26,14 +29,14 @@ const Hero = () => {
 						<Image
 							className={scss.img}
 							src={el.image}
-							alt={el.fullname}
+							alt="img"
 							width={500}
 							height={350}
 							objectFit="cover"
 						/>
 					</div>
 
-					<h1>{el.fullname}</h1>
+					<h1>{el.full_name}</h1>
 					<h3>{el.lesson}</h3>
 					<h3>{el.experience}</h3>
 

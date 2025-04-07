@@ -15,10 +15,10 @@ import {
 	EMAIL_ADDRESS_LINK,
 	PHONE_NUMBER,
 } from "@/constants/admin";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
-	const { t } = useLanguageStore();
+		const t = useTranslations("Footer");
 	return (
 		<footer className={scss.Footer}>
 			<div className="container">
@@ -49,7 +49,7 @@ const Footer = () => {
 						</div>
 						<div className={scss.box3}>
 							 
-							<h1>{t("Footer.sos")}</h1>
+							<h1>{t("sos")}</h1>
 
 							<div className={scss.icons}>
 								<Link
@@ -79,7 +79,7 @@ const Footer = () => {
           
 
           <div className={scss.block2}>
-            <p>{t("Footer.prava")}</p>
+            <p>{t("prava")}</p>
           </div>
 				</div>
 			</div>

@@ -9,6 +9,8 @@ const Hero = () => {
 
 	// const { t } = useLanguageStore();
 
+	
+
 	const router = useRouter();
 	return (
 		<div className={scss.Hero}>

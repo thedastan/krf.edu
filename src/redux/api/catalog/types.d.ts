@@ -111,7 +111,7 @@ namespace TICH {
 		{
 			id: number;
 			image: string;
-			fullname: string;
+			full_name: string;
 			lesson: string;
 			experience: string;
 			file: string;
