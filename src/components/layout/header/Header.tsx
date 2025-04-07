@@ -8,22 +8,23 @@ import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import Language from "./Language";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { t } = useLanguageStore();
+ 	const t = useTranslations("Header");
 	const closeMenu = () => setIsOpen(false);
 
 	const links = [
-		{ title: t("Header.accreditation"), link: "/accreditation" },
-		{ title: t("Header.departments"), link: "/departments" },
-		{ title: t("Header.research"), link: "/works" },
-		{ title: t("Header.specialties"), link: "/specialties" },
+		{ title: t("accreditation"), link: "/accreditation" },
+		{ title: t("departments"), link: "/departments" },
+		{ title: t("research"), link: "/works" },
+		{ title: t("specialties"), link: "/specialties" },
 	];
 
 	const selectOptions = [
-		{ title: t("Header.administration"), link: "/administration" },
-		{ title: t("Header.teachers"), link: "/teachers" },
+		{ title: t("administration"), link: "/administration" },
+		{ title: t("teachers"), link: "/teachers" },
 	];
 
 	return (
@@ -70,7 +71,7 @@ const Header = () => {
 						<Language />
 						<div className={scss.customSelect}>
 							<div className={scss.selectedContent}>
-								<p>{t("Header.facultet")}</p>
+								<p>{t("facultet")}</p>
 								<FaAngleDown className={scss.icon} />
 							</div>
 							<ul className={scss.options}>

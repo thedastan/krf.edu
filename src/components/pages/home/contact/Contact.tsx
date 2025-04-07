@@ -8,29 +8,29 @@ import {
 } from "@/constants/admin";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { useTranslations } from "next-intl";
 const Contact = () => {
 
-	const { t } = useLanguageStore();
+	 const t = useTranslations("Contact");
 
 	return (
 		<div className={scss.Contact}>
 			<div className="container">
-				<h1>{t("Contact.title")}</h1>
+				<h1>{t("title")}</h1>
 				<div className={scss.content}>
 					<div className={scss.text}>
 						<Link className={scss.link} href={"/"}>
 							<span>
 								<FaInstagram />
 							</span>{" "}
-							{t("Contact.text")}
+							{t("text")}
 						</Link>
 
 						<Link className={scss.link} href={"/"}>
 							<span>
 								<FaInstagram />
 							</span>{" "}
-							{t("Contact.text2")}
+							{t("text2")}
 						</Link>
 
 						<Link className={scss.link} href={PHONE_NUMBER_WHATSAPP}>
@@ -44,7 +44,7 @@ const Contact = () => {
 							<span>
 								<FaLocationDot />
 							</span>{" "}
-							{t("Contact.location")}
+							{t("location")}
 						</Link>
 					</div>
 

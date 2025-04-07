@@ -8,8 +8,7 @@ const AdminDetails = () => {
 	const { id } = useParams();  
 
 	const numericId = Number(id);
-
-	console.log(data,'asdfgh');
+ 
 	
 
 	if (isLoading) return <p>Loading...</p>;

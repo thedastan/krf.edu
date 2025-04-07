@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import en from "@/messages/kg.json";
-import ru from "@/messages/ru.json";
+import en from "../../messages/kg.json";
+import ru from "../../messages/ru.json";
 
 interface LanguageStore {
   language: "kg" | "ru";
