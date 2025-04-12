@@ -27,6 +27,10 @@ const Gallery = () => {
     isLoading: boolean;
   };
 
+
+  console.log(data,"gallery");
+  
+
   const [visibleImages, setVisibleImages] = useState<GALLERY.GetGalleryRes>([]);
 
   useEffect(() => {

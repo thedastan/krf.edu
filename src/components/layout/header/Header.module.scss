@@ -9,6 +9,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 10px;
 
 		.image {
 			width: 100px;
@@ -61,33 +62,28 @@
 				}
 			}
 
-      .language {
+			.language {
+				.languageSelect {
+					background: none;
+					border: none;
+					color: white;
+					font-size: 26px;
+					width: 60px;
+					.languageOption {
+						color: rgb(0, 0, 0);
+						background: rgb(255, 255, 255);
+						padding: 10px;
+						font-size: 20px;
 
-			.languageSelect {
-				background: none;
-				border: none;
-				color: white;
-				font-size: 26px;
-				width: 60px;
-				.languageOption {
-					color: rgb(0, 0, 0);
-					background: rgb(255, 255, 255);
-					padding: 10px;
-					font-size: 20px;
-
-				 
-            &:hover {
+						&:hover {
 							background-color: #00132c;
 							border-radius: 20px;
 							color: white;
 						}
-          
+					}
 				}
 			}
 
-      }
- 
- 
 			.customSelect {
 				position: relative;
 				cursor: pointer;
@@ -155,6 +151,7 @@
 
 			.link {
 				color: white;
+				font-size: 16px;
 			}
 		}
 
@@ -199,8 +196,7 @@
 				}
 
 				.language {
-						width: 100%;
-						
+					width: 100%;
 
 					.languageSelect {
 						background: none;
@@ -237,7 +233,6 @@
 						background-color: none;
 						transition: 0.3s;
 						color: black;
-
 					}
 
 					.options {

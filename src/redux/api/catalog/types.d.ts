@@ -3,7 +3,11 @@ namespace NEWS {
 		{
 			id: number;
 			title: string;
+			title_ru: string;
+			title_ky: string;
 			description: string;
+			description_ru: string;
+			description_ky: string;
 			image: string;
 		}
 	];
@@ -29,10 +33,16 @@ namespace SPES {
 			curriculums: Array<{
 				id: number;
 				name_file: string;
-				file: any;
+				name_file_ky: string;
+				name_file_ru: string;
+				file: string;
 			}>;
 			title: string;
+			title_ru: string;
+			title_ky: string;
 			name: string;
+			name_ru: string;
+			name_ky: string;
 		}
 	];
 
@@ -46,10 +56,16 @@ namespace Ilim {
 			sciences: Array<{
 				id: number;
 				name_file: string;
+				name_file_ky: string;
+				name_file_ru: string;
 				file: string;
 			}>;
 			title: string;
+			title_ru: string;
+			title_ky: string;
 			name: string;
+			name_ru: string;
+			name_ky: string;
 		}
 	];
 
@@ -60,13 +76,17 @@ namespace DEPAR {
 	type GetDepartamentRes = [
 		{
 			id: number;
+			events: Array<any>;
 			departments: Array<{
 				id: number;
 				name_file: string;
+				name_file_ky: string;
+				name_file_ru: string;
 				file: string;
 			}>;
-			which_dep: string;
 			name: string;
+			name_ru: string;
+			name_ky: string;
 		}
 	];
 
@@ -80,10 +100,16 @@ namespace ACC {
 			accreds: Array<{
 				id: number;
 				name_file: string;
-				file: string;
+				name_file_ky: string;
+				name_file_ru: string;
+				file: any;
 			}>;
 			title: string;
+			title_ru: string;
+			title_ky: string;
 			name: string;
+			name_ru: string;
+			name_ky: string;
 		}
 	];
 
@@ -95,10 +121,14 @@ namespace ADMIN {
 		{
 			id: number;
 			filefield_administration: Array<{
-				name_file:string
+				name_file: string;
+				name_file_ky: string;
+				name_file_ru: string;
 				file: string;
 			}>;
 			fullname: string;
+			fullname_ky: string;
+			fullname_ru: string;
 			lesson: string;
 		}
 	];
@@ -113,7 +143,11 @@ namespace TICH {
 			image: string;
 			full_name: string;
 			lesson: string;
+			lesson_ru: string;
+			lesson_ky: string;
 			experience: string;
+			experience_ru: string;
+			experience_ky: string;
 			file: string;
 		}
 	];

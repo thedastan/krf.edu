@@ -4,8 +4,8 @@ import { useGetSpesQuery } from "@/redux/api/catalog";
 import { useParams } from "next/navigation";
 
 const SpesDetails = () => {
-	const { data, isLoading, error } = useGetSpesQuery();  
-	const { id } = useParams();  
+	const { data, isLoading, error } = useGetSpesQuery();
+	const { id, locale } = useParams();
 
 	const numericId = Number(id);
 
@@ -23,13 +23,18 @@ const SpesDetails = () => {
 	return (
 		<>
 			<div className={scss.SpesDetails}>
-				<h1 style={{ marginTop: "200px" }}>{spesDetail?.title}</h1>
+				<h1 style={{ marginTop: "200px" }}>
+					{spesDetail?.title}
+					{locale === "kg" ? spesDetail?.title_ky : spesDetail?.title_ru}
+				</h1>
 
 				<div className={scss.cards}>
 					{spesDetail?.curriculums.map((science, index) => (
 						<div className={scss.card} key={index}>
-							<h2>{science.name_file}</h2>
-
+							<h2>
+								{" "}
+								{locale === "kg" ? science.name_file_ky : science.name_file_ru}
+							</h2>
 							<button
 								style={{
 									border: "none",
@@ -42,8 +47,6 @@ const SpesDetails = () => {
 							</button>
 						</div>
 					))}
-
-          
 				</div>
 			</div>
 		</>

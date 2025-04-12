@@ -2,13 +2,14 @@
 import { useGetSpesQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
 // import { useRouter } from "next/router";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 
 const Hero = () => {
 	const { data } = useGetSpesQuery();
 		const t = useTranslations("Spec");
+		const { locale } = useParams();	
 	const router = useRouter();
 	return (
 		<div className={scss.Hero}>
@@ -17,7 +18,7 @@ const Hero = () => {
 				<div className={scss.content}>
 					{data?.map((el, index) => (
 						<h1 onClick={() => router.push(`specialties/${el.id}`)} key={index}>
-							{el.title}
+							{locale === "kg" ? el.title_ky : el.title_ru}
 						</h1>
 					))}
 					

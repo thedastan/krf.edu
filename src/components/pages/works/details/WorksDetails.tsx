@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 
 const WorksDetails = () => {
 	const { data, isLoading, error } = useGetIlimQuery();  
-	const { id } = useParams();  
+	const { id,locale } = useParams();  
 
 	const numericId = Number(id);
 
@@ -23,12 +23,14 @@ const WorksDetails = () => {
 	return (
 		<>
 			<div className={scss.WorksDetails}>
-				<h1 style={{ marginTop: "200px" }}>{spesDetail?.title}</h1>
+				<h1 style={{ marginTop: "200px" }}>{locale === "kg" ? spesDetail?.title_ky : spesDetail?.title_ru}</h1>
 
 				<div className={scss.cards}>
 					{spesDetail?.sciences.map((science, index) => (
 						<div className={scss.card} key={index}>
-							<h2>{science.name_file}</h2>
+
+			 
+							<h2>	{locale === "kg" ? science.name_file_ky : science.name_file_ru}</h2>
 
 							<button
 								style={{

@@ -1,11 +1,11 @@
 "use client";
 import scss from "../hero/Hero.module.scss";
-import { useGetDepartamentQuery} from "@/redux/api/catalog";
+import { useGetDepartamentQuery } from "@/redux/api/catalog";
 import { useParams } from "next/navigation";
 
 const DepartmentsDetails = () => {
-	const { data, isLoading, error } = useGetDepartamentQuery();  
-	const { id } = useParams();  
+	const { data, isLoading, error } = useGetDepartamentQuery();
+	const { id, locale } = useParams();
 
 	const numericId = Number(id);
 
@@ -23,12 +23,17 @@ const DepartmentsDetails = () => {
 	return (
 		<>
 			<div className={scss.WorksDetails}>
-				<h1 style={{ marginTop: "200px" }}>{spesDetail?.which_dep}</h1>
+				<h1 style={{ marginTop: "200px" }}>
+					{locale === "kg" ? spesDetail?.name_ky : spesDetail?.name_ru}
+				</h1>
 
 				<div className={scss.cards}>
 					{spesDetail?.departments.map((science, index) => (
 						<div className={scss.card} key={index}>
-							<h2>{science.name_file}</h2>
+							<h2>
+								{" "}
+								{locale === "kg" ? science.name_file_ky : science.name_file_ru}
+							</h2>
 
 							<button
 								style={{
@@ -42,8 +47,6 @@ const DepartmentsDetails = () => {
 							</button>
 						</div>
 					))}
-
-          
 				</div>
 			</div>
 		</>
@@ -51,4 +54,3 @@ const DepartmentsDetails = () => {
 };
 
 export default DepartmentsDetails;
-

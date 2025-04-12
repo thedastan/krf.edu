@@ -3,13 +3,15 @@ import {  useGetTicherQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const Hero = () => {
 	const { data } = useGetTicherQuery();
 
 		const t = useTranslations("Teacher");
 
-		console.log(data,"ticher");
+		const { locale } = useParams();	
+
 		
 
 	const handleFileClick = (fileUrl: any) => {
@@ -36,9 +38,9 @@ const Hero = () => {
 						/>
 					</div>
 
-					<h1>{el.full_name}</h1>
-					<h3>{el.lesson}</h3>
-					<h3>{el.experience}</h3>
+					<h1>{locale === "kg" ? el.full_name : el.full_name}</h1>
+					<h3>{locale === "kg" ? el.lesson_ky : el.lesson_ru}</h3>
+					<h3>{locale === "kg" ? el.experience_ky : el.experience_ru}</h3>
 
 					<button
 						style={{

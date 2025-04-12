@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 
 const NewsDetails = () => {
 	const { data } = useGetNewsQuery();
+	const { locale } = useParams();
 
   const { id } = useParams();
 	const newsItem = data?.find(el => el.id.toString() === id);
@@ -23,8 +24,8 @@ const NewsDetails = () => {
                 <Image fill objectFit="cover" src={newsItem.image} alt="img" />
 
                 </div>
- 								<h1>{newsItem.title}</h1>
-								<p>{newsItem.description}</p>
+								 <h2>{locale === "kg" ? newsItem.title_ky : newsItem.title_ru}</h2>
+								<p>{locale === "kg" ? newsItem.description_ky : newsItem.description_ru}</p>
 							</div>
 					</div>
 				</div>

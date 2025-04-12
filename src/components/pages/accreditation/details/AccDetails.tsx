@@ -1,11 +1,14 @@
 "use client";
 import scss from "../hero/Hero.module.scss";
-import { useGetAccQuery, useGetIlimQuery} from "@/redux/api/catalog";
+import { useGetAccQuery, useGetIlimQuery } from "@/redux/api/catalog";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 
 const AccDetails = () => {
-	const { data, isLoading, error } = useGetAccQuery();  
-	const { id } = useParams();  
+	const { data, isLoading, error } = useGetAccQuery();
+	const { id } = useParams();
+
+	const { locale } = useParams();
 
 	const numericId = Number(id);
 
@@ -23,12 +26,18 @@ const AccDetails = () => {
 	return (
 		<>
 			<div className={scss.WorksDetails}>
-				<h1 style={{ marginTop: "200px" }}>{spesDetail?.title}</h1>
+				<h1 style={{ marginTop: "200px" }}>
+					{spesDetail?.title}
+					{locale === "kg" ? spesDetail?.name_ky : spesDetail?.title_ru}
+				</h1>
 
 				<div className={scss.cards}>
 					{spesDetail?.accreds.map((science, index) => (
 						<div className={scss.card} key={index}>
-							<h2>{science.name_file}</h2>
+
+							<h2>
+								{locale === "kg" ? science.name_file_ky : science.name_file_ru}
+							</h2>
 
 							<button
 								style={{
@@ -42,8 +51,6 @@ const AccDetails = () => {
 							</button>
 						</div>
 					))}
-
-          
 				</div>
 			</div>
 		</>

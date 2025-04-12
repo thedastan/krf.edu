@@ -1,14 +1,15 @@
 "use client";
-import { useState } from "react";
 import scss from "./News.module.scss";
 import { useGetNewsQuery } from "@/redux/api/catalog";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const News = () => {
 	const t = useTranslations("News");
 	const { data } = useGetNewsQuery();
+	const { locale } = useParams();	
 
 	return (
 		<div className={scss.News}>
@@ -28,7 +29,8 @@ const News = () => {
 										objectFit="cover"
 									/>
 								</div>
-								<h2>{el.title}</h2>
+
+								<h2>{locale === "kg" ? el.title_ky : el.title_ru}</h2>
 							</div>
 						</Link>
 					))}

@@ -1,12 +1,14 @@
 "use client";
 import { useGetIlimQuery } from "@/redux/api/catalog";
 import scss from "./Hero.module.scss";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 
 const Hero = () => {
 	const { data } = useGetIlimQuery();
+		const { locale } = useParams();
+	
 
 	const t = useTranslations("Works");
 	
@@ -19,7 +21,7 @@ const Hero = () => {
 				<div className={scss.content}>
 					{data?.map((el, index) => (
 						<h1 onClick={() => router.push(`works/${el.id}`)} key={index}>
-							{el.title}
+							{locale === "kg" ? el.title_ky : el.title_ru}
 						</h1>
 					))}
 					

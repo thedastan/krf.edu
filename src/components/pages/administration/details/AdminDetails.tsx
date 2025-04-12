@@ -5,7 +5,8 @@ import { useParams } from "next/navigation";
 
 const AdminDetails = () => {
 	const { data, isLoading, error } = useGetAdminQuery();  
-	const { id } = useParams();  
+	const { id,locale } = useParams(); 
+	  
 
 	const numericId = Number(id);
  
@@ -25,12 +26,13 @@ const AdminDetails = () => {
 	return (
 		<>
 			<div className={scss.WorksDetails}>
-				<h1 style={{ marginTop: "200px" }}>{spesDetail?.fullname}</h1>
+				<h1 style={{ marginTop: "200px" }}>{locale === "kg" ? spesDetail?.fullname_ky : spesDetail?.fullname_ru}</h1>
 
 				<div className={scss.cards}>
 					{spesDetail?.filefield_administration.map((science, index) => (
 						<div className={scss.card} key={index}>
-							<h2>{science.name_file}</h2>
+							<h2>{locale === "kg" ? science.name_file_ky : science.name_file_ru}</h2>
+							
 
 							<button
 								style={{

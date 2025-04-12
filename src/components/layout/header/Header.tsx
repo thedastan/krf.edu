@@ -6,7 +6,6 @@ import scss from "./Header.module.scss";
 import logo from "@/assets/images/logo.jpeg";
 import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
-import { useLanguageStore } from "@/stores/useLanguageStore";
 import Language from "./Language";
 import { useTranslations } from "next-intl";
 
