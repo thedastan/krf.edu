@@ -14,8 +14,8 @@ export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER_WHATSAPP}`
 
 export const EMAIL_ADDRESS_LINK = `mailto:${EMAIL_ADDRESS}`
 
-export const INSTAGRAM_LINK = `https://www.instagram.com/infortechnology_/`
-export const TELEGRAM_LINK = `https://t.me/+996772621772`
+export const INSTAGRAM_LINK = `https://www.instagram.com/kyrgyz_rossia25?igsh=MXRxZWp2aXJ0bzdwNg==`
+export const FACEBOOK_LINK = `https://www.facebook.com/share/19mjqm6sna/?mibextid=wwXIfr`
 
 
 export const LOCATION_LINK = 'https://2gis.kg/bishkek/firm/70000001067675181?m=74.595853%2C42.882645%2F20'

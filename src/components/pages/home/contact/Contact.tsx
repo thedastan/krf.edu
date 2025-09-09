@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import {
 	PHONE_NUMBER,
 	PHONE_NUMBER_WHATSAPP,
+	WHATSAPP_LINK,
 } from "@/constants/admin";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -19,33 +20,33 @@ const Contact = () => {
 				<h1>{t("title")}</h1>
 				<div className={scss.content}>
 					<div className={scss.text}>
-						<Link className={scss.link} href={"/"}>
+						<p className={scss.link}  >
 							<span>
 								<FaInstagram />
 							</span>{" "}
 							{t("text")}
-						</Link>
+						</p>
 
-						<Link className={scss.link} href={"/"}>
+						<p className={scss.link}  >
 							<span>
 								<FaInstagram />
 							</span>{" "}
 							{t("text2")}
-						</Link>
+						</p>
 
-						<Link className={scss.link} href={PHONE_NUMBER_WHATSAPP}>
+						<Link className={scss.link} href={WHATSAPP_LINK}>
 							<span>
 								<FaWhatsapp />
 							</span>{" "}
 							{PHONE_NUMBER}
 						</Link>
 
-						<Link className={scss.link} href={PHONE_NUMBER_WHATSAPP}>
+						<p className={scss.link}  >
 							<span>
 								<FaLocationDot />
 							</span>{" "}
 							{t("location")}
-						</Link>
+						</p>
 					</div>
 
 					<div className={scss.map}>

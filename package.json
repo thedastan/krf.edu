@@ -23,6 +23,7 @@
     "sass": "^1.83.0",
     "sitemap": "^8.0.0",
     "store": "link:@types/@/redux/store",
+    "swiper": "^11.2.10",
     "zustand": "^5.0.2"
   },
   "devDependencies": {

@@ -13,9 +13,13 @@ import {
 import {
 	EMAIL_ADDRESS,
 	EMAIL_ADDRESS_LINK,
+	FACEBOOK_LINK,
+	INSTAGRAM_LINK,
 	PHONE_NUMBER,
+	WHATSAPP_LINK,
 } from "@/constants/admin";
 import { useTranslations } from "next-intl";
+import { CiFacebook } from "react-icons/ci";
 
 const Footer = () => {
 		const t = useTranslations("Footer");
@@ -54,21 +58,21 @@ const Footer = () => {
 							<div className={scss.icons}>
 								<Link
 									className={scss.link}
-									href={EMAIL_ADDRESS_LINK}
+									href={INSTAGRAM_LINK}
 									target={"_blank"}>
 									<FaInstagram />
 								</Link>
 								<Link
 									className={scss.link}
-									href={EMAIL_ADDRESS_LINK}
+									href={WHATSAPP_LINK}
 									target={"_blank"}>
 									<FaWhatsapp />
 								</Link>
 								<Link
 									className={scss.link}
-									href={EMAIL_ADDRESS_LINK}
+									href={FACEBOOK_LINK}
 									target={"_blank"}>
-									<FaTelegram />
+									<CiFacebook />
 								</Link>
 							</div>
 						</div>

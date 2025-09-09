@@ -3,7 +3,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
    images:{
-    domains:["bekturk2025.pythonanywhere.com"]
+    domains:["facultet.pythonanywhere.com"]
    }
 };
 
