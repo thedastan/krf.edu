@@ -6,7 +6,7 @@ import scss from "./About.module.scss";
 
 // Импорты изображений
 import img1 from "@/assets/images/image3.png";
-import img2 from "@/assets/images/image2_1.png";
+import img2 from "@/assets/images/dekan.jpeg";
 import about_boy from "@/assets/images/about-boy.jpg";
 import about_tich from "@/assets/images/about-ticher.jpg";
 
